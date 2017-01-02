@@ -59,6 +59,11 @@ double3x3::double3x3(double aa, double ab, double ac, double ba, double bb, doub
 	matrix { aa,ab,ac,ba,bb,bc,ca,cb,cc }	//c++11
 {}
 
+double double3x3::getij(int i, int j)
+{
+	return matrix[++i][++j];	
+}
+
 double3x3 double3x3::mmult(const double3x3 & T)
 {
 	double3x3 temp = double3x3();

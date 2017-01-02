@@ -53,8 +53,3 @@ The floating point errors can't be avoided. In Source.cpp you can change epsilon
 If you find the test being triggered many times for the value of epsilon you set then this may not be suitable for your needs.
 
 Also you don't have to worry about the homogeneous coordinates. They're safe and auto.
-
-# ToDo
-Draw the points on screen
-Display more decimal points lol
-Idk if anything will break it

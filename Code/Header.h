@@ -12,6 +12,8 @@ public:
 		double ba, double bb, double bc,
 		double ca, double cb, double cc);
 
+	double getij(int i, int j);
+	
 	double matrix[3][3] = { 0 };
 
 	//multiplication between this matrix & another matrix

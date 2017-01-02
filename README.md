@@ -1,7 +1,7 @@
 # Align Points
-The program takes 2 sets of 2 points as input and finds a matrix that maps the first set onto the second.
+The program takes 2 sets of 2 points as input and finds a matrix that maps the first set onto the second. All done in native C (the main motivation for doing it)
 
-#Use
+#Stuff
 Header.h and Header.cpp contain the actual useful code. Source.cpp is a demo. Just compile and follow the instructions on screen.
 Basically it lets you enter a pair of points, generates a random matrix and transforms those 2 points, then uses the stuff in Header.cpp to guess the matrix.
 
@@ -30,3 +30,7 @@ If you find the test being triggered many times for the value of epsilon you set
 
 Also you don't have to worry about the homogeneous coordinates. They're safe and auto.
 
+# ToDo
+Draw the points on screen
+Display more decimal points lol
+Idk if anything will break it

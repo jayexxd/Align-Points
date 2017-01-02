@@ -1,6 +1,30 @@
 # Align Points
 The program takes 2 sets of 2 points as input and finds a matrix that maps the first set onto the second. All done in native C (the main motivation for doing it)
 
+#How to use
+- Make sure your compiler can find Header.h and Header.cpp or just copy them into your code.
+
+- `#include "Header.h"`
+
+- Create 4 `vector3`s A, B, Ap, Bp. A and B are your initial set of points, Ap and Bp are where they end up later. 
+
+- Call the function ` findW( A,  B,  Ap,  Bp)`.  You have to be sure this is a linear transformation. Simply put if your transformation applied to a point on the line AB, the resultant must be on the line ApBp. The function returns a double3x3 object. That's it.
+
+##Stuff you might need to use:
+###`double3x3::getij(int i,int j)`:
+This lets you get the elements safely! I could have made things `private` but eh. Note that in this case the matrix is numbered like this:
+```
+[11 12 13]
+[21 22 23]
+[31 32 33]
+```
+just like in math so to get element 11 you do `mymatrix.getij(1,1)` or use `mymatrix.matrix[0][0]`. Simple.
+
+###`vector3::vector3(double x, double y)`:
+The constructor doesn't let you specify the 3rd value! Why! This is because we are not in 3D mode but are actually using homogeneous coordinates. w == 1 for points, w == 0 for vectors. This helps.
+
+That's all!
+
 #Stuff
 Header.h and Header.cpp contain the actual useful code. Source.cpp is a demo. Just compile and follow the instructions on screen.
 Basically it lets you enter a pair of points, generates a random matrix and transforms those 2 points, then uses the stuff in Header.cpp to guess the matrix.
